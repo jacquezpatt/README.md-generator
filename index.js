@@ -2,40 +2,50 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 const renderTitle = (title) => {
-console.log(title);
-}
+return `# ${title}`
+};
 
 const renderDescr = () => {
-console.log(description);
-}
+return `## Desciption
+${description}`
+};
 
 const renderContent = () => {
-console.log(content);
-}
+return `## Table of Contents
+    - [${content}](Contains-the-html-page-for-the-generator.)
+    - [${content}](Contains-a-screenshot-of-the-assignment.)
+    - [${content}](Contains-the-javascript-file.)
+    - [${content}](Contains-the-stylesheet.)`
+};
 
 const renderInstall = () => {
-console.log(install);
-}
+return `## Istallation Instructions
+${install}`
+};
 
 const renderUsage = () => {
-console.log(usage);
-}
+return `## Usage 
+${usage}`
+};
 
 const renderLicense = () => {
-console.log(license);
-}
+return
+};
 
 const renderContr = () => { 
-console.log(contribution);
-}
+return `## Contribution
+${contribution}`
+};
 
 const renderTests = () => {
-console.log(tests);
-}
+return `## Test
+${tests}`
+};
 
 const renderQuests = () => {
-console.log(questions);
-}
+return `## Questions
+${questions}`
+};
 
 
 inquirer.prompt([
