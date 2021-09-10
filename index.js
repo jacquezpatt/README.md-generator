@@ -1,40 +1,40 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const renderTitle = () => {
-
+const renderTitle = (title) => {
+console.log(title);
 }
 
 const renderDescr = () => {
-
+console.log(description);
 }
 
 const renderContent = () => {
-
+console.log(content);
 }
 
 const renderInstall = () => {
-
+console.log(install);
 }
 
 const renderUsage = () => {
-
+console.log(usage);
 }
 
 const renderLicense = () => {
-
+console.log(license);
 }
 
-const renderContr = () => {
-
+const renderContr = () => { 
+console.log(contribution);
 }
 
 const renderTests = () => {
-
+console.log(tests);
 }
 
 const renderQuests = () => {
-
+console.log(questions);
 }
 
 
