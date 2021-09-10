@@ -12,10 +12,10 @@ ${description}`
 
 const renderContent = () => {
 return `## Table of Contents
-    - [${content}](Contains-the-html-page-for-the-generator.)
-    - [${content}](Contains-a-screenshot-of-the-assignment.)
-    - [${content}](Contains-the-javascript-file.)
-    - [${content}](Contains-the-stylesheet.)`
+    - [${content1}](Contains-the-html-page-for-the-generator.)
+    - [${content2}](Contains-a-css-stylesheet.)
+    - [${content3}](Contains-the-javascript-file.)
+    - [${content4}](Contains-the-assets-used-in-the-project.)`
 };
 
 const renderInstall = () => {
@@ -61,8 +61,23 @@ inquirer.prompt([
     },
     {
         type:'input',
-        message:'Enter table of contents',
-        name: 'content'
+        message: 'Enter HTML page title',
+        name: 'content 1'
+    },
+    {
+        type:'input',
+        message: 'Enter stylesheet title',
+        name: 'content 2'
+    },
+    {
+        type:'input',
+        message: 'Enter javascript title',
+        name: 'content 3'
+    },
+    {
+        type:'checkbox',
+        choices: 'Is there an assets folder',
+        name: 'content 4'
     },
     {
         type:'input',
@@ -94,10 +109,13 @@ inquirer.prompt([
         message:'Enter gitHub username & email address',
         name: 'questions'
     }
-]).then(({ title, description, content, install, usage, license, contribution, tests, questions}) => {
+]).then(({ title, description, content1, content2, content3, content4, install, usage, license, contribution, tests, questions}) => {
 renderTitle(title);
 renderDescr(description);
-renderContent(content);
+renderContent(content1);
+renderContent(content2);
+renderContent(content3);
+renderContent(content4);
 renderInstall(install);
 renderUsage(usage);
 renderLicense(license);
