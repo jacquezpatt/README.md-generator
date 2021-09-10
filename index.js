@@ -1,6 +1,43 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+const renderTitle = () => {
+
+}
+
+const renderDescr = () => {
+
+}
+
+const renderContent = () => {
+
+}
+
+const renderInstall = () => {
+
+}
+
+const renderUsage = () => {
+
+}
+
+const renderLicense = () => {
+
+}
+
+const renderContr = () => {
+
+}
+
+const renderTests = () => {
+
+}
+
+const renderQuests = () => {
+
+}
+
+
 inquirer.prompt([
     {
         type:'input',
@@ -29,7 +66,7 @@ inquirer.prompt([
     },
     {
         type:'checkbox',
-        message:'select a badge',
+        choices:['badge1', 'badge2', 'badge3'],
         name: 'license'
     },
     {
@@ -44,7 +81,17 @@ inquirer.prompt([
     },
     {
         type:'input',
-        message:'Enter contact info',
+        message:'Enter gitHub username & email address',
         name: 'questions'
     }
-])
+]).then(({ title, description, content, install, usage, license, contribution, tests, questions}) => {
+renderTitle(title);
+renderDescr(description);
+renderContent(content);
+renderInstall(install);
+renderUsage(usage);
+renderLicense(license);
+renderContr(contribution);
+renderTests(tests);
+renderQuests(questions);
+});
