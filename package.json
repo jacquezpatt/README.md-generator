@@ -1,0 +1,23 @@
+{
+  "name": "README.md-generator",
+  "version": "1.0.0",
+  "description": "An application that dynamically generates a README.md file, for use on projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacquezpatt/README.md-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacquezpatt/README.md-generator/issues"
+  },
+  "homepage": "https://github.com/jacquezpatt/README.md-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}

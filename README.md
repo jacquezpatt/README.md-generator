@@ -1,7 +1,7 @@
 # README.md Generator
 
 ## Desciption
-An application that dynamically generates a README.md file, for use on projects.
+An application that dynamically generates a sample README.md file, for use on projects.
 
 ## Table of Contents
 - [index.html](Contains-the-html-page-for-the-generator.)
