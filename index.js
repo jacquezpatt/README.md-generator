@@ -1,20 +1,26 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const renderReadMe = (readMe) => {
+const outputREADME = (readme) => {
+fs.writeFile('newREADME.md', readme, (err) => {
+if (err) console.log(err);
+});
+};
 
+const renderReadMe = (...baseReadMe) => { 
+return baseReadMe;
 }
 
 const renderTitle = (title) => {
     return `# ${title}`
 };
 
-const renderDescr = () => {
+const renderDescr = (description) => {
     return `## Desciption
 ${description}`
 };
 
-const renderContent = () => {
+const renderContent = ([content1, content2, content3, content4]) => {
     return `## Table of Contents
     - [${content1}](Contains-the-html-page-for-the-generator.)
     - [${content2}](Contains-a-css-stylesheet.)
@@ -22,31 +28,31 @@ const renderContent = () => {
     - [${content4}](Contains-the-assets-used-in-the-project.)`
 };
 
-const renderInstall = () => {
+const renderInstall = (install) => {
     return `## Istallation Instructions
 ${install}`
 };
 
-const renderUsage = () => {
+const renderUsage = (usage) => {
     return `## Usage 
 ${usage}`
 };
 
-const renderLicense = () => {
+const renderLicense = (license) => {
     return
 };
 
-const renderContr = () => {
+const renderContr = (contribution) => {
     return `## Contribution
 ${contribution}`
 };
 
-const renderTests = () => {
+const renderTests = (tests) => {
     return `## Test
 ${tests}`
 };
 
-const renderQuests = () => {
+const renderQuests = (questions) => {
     return `## Questions
 ${questions}`
 };
@@ -79,8 +85,8 @@ inquirer.prompt([
         name: 'content 3'
     },
     {
-        type: 'checkbox',
-        choices: ['assets folder', 'no assets folder'],
+        type: 'confirm',
+        message: 'assets folder?',
         name: 'content 4'
     },
     {
@@ -129,5 +135,5 @@ inquirer.prompt([
     const baseReadMe = renderReadMe(baseTitle, baseDescription, baseContent1, baseContent2,
     baseContent3, baseContent4, baseInstall, baseUsage, baseLicense, baseContribution,
     baseTests, baseQuestions);
-    console.log(baseReadMe);
+outputREADME(baseReadMe);
 });
