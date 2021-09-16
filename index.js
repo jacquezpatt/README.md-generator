@@ -1,6 +1,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-
+const MITbadge = ('[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)');
+const Apachebadge = ('[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)')
+const BOOSTbadge = ('[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)BSD')
 const outputREADME = (readme) => {
 fs.writeFile('newREADME.md', readme, (err) => {
 if (err) console.log(err);
@@ -39,7 +41,8 @@ ${usage}`
 };
 
 const renderLicense = (license) => {
-    return
+    return `##License
+    ${license}`
 };
 
 const renderContr = (contribution) => {
@@ -101,7 +104,7 @@ inquirer.prompt([
     },
     {
         type: 'checkbox',
-        choices: ['badge1', 'badge2', 'badge3'],
+        choices: ['MITbadge', 'Apachebadge', 'BOOSTbadge'],
         name: 'license'
     },
     {
